@@ -1,0 +1,39 @@
+Verbos que envian peticiones 
+
+GET
+    Obtener informacion de la base de datos
+
+POST
+    Insertar nueva de informacion a la base de datos
+
+PUT
+    Modificar la base de datos
+
+DELETE
+    Eliminar informacion de la base de datos
+
+PATCH 
+    Realizar cambios parciales 
+
+
+En la carpeta *store* crear el archivo *users-store.js*
+
+1) Definir un objeto literal *state* que permitira obterner la informacion de los usuarios y la pagina
+
+2) Definir constante que contiene el metodo asincronico de cargar pagina, siguiente y anterior
+
+3) metodo onUserChanged permite detectar cambios del usuario cuando se recarga la pagina
+
+4) Zona de exportacion, *export default* Agrupar los metodos que estan dentro de una clase
+
+
+En la carpeta use-cases crear el archivo load-users-by-page.js  
+    Aqui hacemos uso de las variables de entorno, por lo que debemos crear las variables en el archivo .env 
+
+En la carpeta *users* crear archivo users-app.js
+
+Al tener cargada la informacion d los usuarios, se hace TRANFORMACION DE LA DATA 
+
+    Al hacer esto, pueden ocurrir varios errores, para evitarlo crearemos un modelo que ayuda a refenciar cada una de las propiedades de la BASE DE DATOS
+Crear archivo user.js en la carpeta models
+

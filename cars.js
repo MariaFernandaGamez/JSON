@@ -21,7 +21,7 @@ const cars = `[
 
 console.log(typeof cars);
 
-// 2) Para convertir la cadena en un objeto JS usarv el metodo parse
+// 2) Para convertir la cadena en un objeto JS usar el metodo parse
 
 const jsonData = JSON.parse(cars);
 console.log(typeof jsonData)

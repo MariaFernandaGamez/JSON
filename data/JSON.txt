@@ -1,0 +1,45 @@
+************** IMPLEMENTACION E INTEGRACION DE JSON EN PROJECTOS VITE ****************
+
+1) en terminal
+    --> npm i json-server --save-dev
+2) en package.json
+Linea de configuracion, es el comando que permite que se ejecute json server y la base de datos que se encuentran en la carpeta server, y que adicional se ejecute en el puerto 3001
+    --> "server" : "json-server server/db.json --port 3001"
+3) en terminal
+    --> npm run server
+
+
+************** ESCRITURA DE DATOS JSON DESDE JS ***************
+
+1) Crear el objeto literal con la estructura correspondiente de JSON
+    
+2) Convertir el objeto literal a cadena de string
+    let jsonData = JSON.stringify(objetoLiteral);
+
+3) Usar metodo file system y require para hacer peticiones desde node.js
+    const fs = require ('fs');
+
+4) Usar parametros de escritura
+    fs.writeFile('ruta del archivo JSON donde se guardara', jsonData, (error)=> {
+        if(error) {
+            console.log('error')
+        };
+        console.log('Archivo JSON cargado exitosamente')
+});
+
+
+************** LECTURA DE DATOS JSON ******************
+
+-- require es una funcion sincronica y se llama una sola vez, si se actualiza el archivo JSON no se puede volver a leer con este metodo --
+
+1) Usar metodo file system y require para hacer peticiones desde node.js
+    const fs = require ('fs');
+
+2) Usar parametros de lectura (carga de datos)
+    let dataJSON = fs.readFileSync('archivo.json');
+
+3) Pasar la cadena de string a objeto literal para poder manipularlo como tal con el metodo parse
+    let objetoLiteral = JSON.parse(dataJSON);
+
+3) Peticion require de lectura de datos de JSON
+    let objetoLiteral = require('ruta del archivo JSON');
